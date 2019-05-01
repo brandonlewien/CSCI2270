@@ -10,11 +10,11 @@
 using namespace std;
 
 struct ForSale{
-						       //price, name, sale
+						            //price, name, sale
 	int price;
 	string name;
 	string sale;
-	ForSale(){} 		       //destructor
+	ForSale(){} 		            //destructor
 	ForSale(string n, string s, int p){
 		price = p;
 		name = n;
@@ -25,23 +25,22 @@ struct ForSale{
 int main(int argc, char*argv[]){
 	float scores[10], total;
 	string filename = argv[1];
-	int a[100];		 		  //array of 100 integers called a
+	int a[100];		 		        //array of 100 integers called a
 	int b[100];
-					 		  //array of ForSales
-	                 		  //this will be populated with file data
+					 		        //array of ForSales
+	                 		        //this will be populated with file data
 	ForSale allForSales[100];
-					          //streams
-
-	ifstream myfile(argv[1]); //argv[1] for the first input argv
-							  //Build compile first then pwrshell
+					                //streams
+	ifstream myfile(argv[1]);       //argv[1] for the first input argv
+							        //Build compile first then pwrshell
 	int counter = 0;
 	int match = 0;
-	if(myfile.is_open()){     //read the file
+	if(myfile.is_open()){           //read the file
 		string line;
 		while(getline(myfile, line)){
-							  //string stream - include sstream
+							        //string stream - include sstream
 			stringstream ss;
-							  //write line string into string stream
+							        //write line string into string stream
 			ss<<line;
 			string item;
 			string newname;
